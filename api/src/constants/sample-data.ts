@@ -1,0 +1,42 @@
+export const mockUniversityData = [
+  {
+    domains: ['guc.edu.eg'],
+    alpha_two_code: 'EG',
+    country: 'Egypt',
+    web_pages: ['http://www.guc.edu.eg/'],
+    name: 'German University in Cairo',
+    'state-province': null,
+  },
+  {
+    domains: ['aucegypt.edu'],
+    alpha_two_code: 'EG',
+    country: 'Egypt',
+    web_pages: ['http://www.aucegypt.edu/'],
+    name: 'American University in Cairo',
+    'state-province': null,
+  },
+  {
+    domains: ['cu.edu.eg'],
+    alpha_two_code: 'EG',
+    country: 'Egypt',
+    web_pages: ['http://www.cu.edu.eg/'],
+    name: 'Cairo University',
+    'state-province': null,
+  },
+  {
+    domains: ['guc.edu.eg'],
+    alpha_two_code: 'EG',
+    country: 'Egypt',
+    web_pages: ['http://www.guc.edu.eg/'],
+    name: 'German University in Cairo',
+    'state-province': null,
+  },
+  {
+    domains: ['aucegypt.edu'],
+    alpha_two_code: 'EG',
+    country: 'Egypt',
+    web_pages: ['http://www.aucegypt.edu/'],
+    name: 'American University in Cairo',
+    'state-province': null,
+  },
+];
