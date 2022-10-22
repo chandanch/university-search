@@ -14,4 +14,13 @@ describe('OrderValidatorPipe', () => {
       expect(pipe.transform('dedwd')).toThrow(BadRequestException);
     }
   });
+
+  it('should return passed value', () => {
+    let pipe;
+    try {
+      pipe = new SortOrderValidationPipe();
+    } catch (error) {
+      expect(pipe.transform('desc')).toEqual('desc');
+    }
+  });
 });

@@ -35,6 +35,11 @@ describe('UniversityController', () => {
     }
   };
 
+  const checkDuplicates = (items: Array<any>, key: string) => {
+    const uniqueItems = new Set(items.map((item) => item[key]));
+    return uniqueItems.size < items.length;
+  };
+
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UniversityController],
@@ -78,6 +83,13 @@ describe('UniversityController', () => {
     );
     // console.log(universitiesResponse);
     expect(universitiesResponse.length).toBeGreaterThan(0);
+  });
+
+  it('should not contain duplicate universities', async () => {
+    const universitiesResponse = await controller.getUniversities('london');
+    // console.log(universitiesResponse);
+    const isDuplicate = checkDuplicates(universitiesResponse, 'name');
+    expect(isDuplicate).toStrictEqual(false);
   });
 
   it('should contain universities sorted in ascending order', async () => {
